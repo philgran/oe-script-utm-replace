@@ -1,0 +1,1 @@
+A simple script (utm-replace.js) to pull utm_term param from the URL of a page and replace a tag param on all amazon links with that value.
