@@ -1,0 +1,25 @@
+{
+  "name": "oe-script-utm-replace",
+  "version": "1.0.0",
+  "description": "A simple script (utm-replace.js) to pull utm_term param from the URL of a page and replace a tag param on all amazon links with that value.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ua-parser-js": "^0.7.23"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philgran/oe-script-utm-replace.git"
+  },
+  "author": "Phil Gran <philgran@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/philgran/oe-script-utm-replace/issues"
+  },
+  "homepage": "https://github.com/philgran/oe-script-utm-replace#readme"
+}
