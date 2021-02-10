@@ -4,8 +4,7 @@
   "description": "A simple script (utm-replace.js) to pull utm_term param from the URL of a page and replace a tag param on all amazon links with that value.",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1",
-    "ua-parser-js": "^0.7.23"
+    "express": "^4.17.1"
   },
   "devDependencies": {},
   "scripts": {
