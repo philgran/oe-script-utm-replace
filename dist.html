@@ -2,7 +2,7 @@
   // Put this immediately before the closing </body> tag
   (function(){
     function getMobileOperatingSystem () {
-      let userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
       // Windows Phone must come first because its UA also contains "Android"
       switch(true) {
         case /windows phone/i.test(userAgent):
