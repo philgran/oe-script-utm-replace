@@ -37,9 +37,9 @@
     }
     // if uastring includes android, change to android intent link and bind a click handler
     if (getMobileOperatingSystem() === 'Android') {
-      const ASIN = url.pathname.match("(?:[/dp/]|$)([A-Z0-9]{10})")[0].replace('/', '');
+      var ASIN = url.pathname.match("(?:[/dp/]|$)([A-Z0-9]{10})")[0].replace('/', '');
       // Build new Android deep link url with params from original URL
-      url = new URL(`intent://#Intent;package=com.amazon.mShop.android.shopping;scheme=com.amazon.mobile.shopping.web://${url.hostname}/o/ASIN/${ASIN}/${term}/ref=nosim//;end`);
+      url = new URL('intent://#Intent;package=com.amazon.mShop.android.shopping;scheme=com.amazon.mobile.shopping.web://' + url.hostname + '/o/ASIN/' + ASIN + '/' + term + '/ref=nosim//;end');
       link.addEventListener('click', function() {
         // When the link is clicked, set the window location to our Android deep link
         window.location.href = url;
