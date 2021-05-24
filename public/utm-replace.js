@@ -20,8 +20,16 @@
 
   // Make an array from all the <a> tags on the page and filter them
   var amazonLinks = Array.from(document.querySelectorAll('a')).filter(function(a) {
-    // Filter for only amazon links
-    return a.href.includes('amazon');
+    // Look for <a> tags that have an image inside, we don't want to replace these
+    var children = [...a.children]
+    var linkContainsImg = children && children.map(el => {
+      return el.tagName.toLowerCase() === 'img'
+    }).includes(true);
+
+    // Filter for only amazon links without nested images
+    if (!linkContainsImg) {
+      return a.href.includes('amazon');
+    }
   });
   amazonLinks.forEach(function(link) {
     var url = new URL(link);
